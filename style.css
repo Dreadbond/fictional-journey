@@ -1,0 +1,143 @@
+:root {
+	--player-health: 100%;
+	--player-wizar: 80%;
+	--player-armor: 10%;
+	--target-health: 75%;
+	--target-wizar: 90%;
+	--target-armor: 0%;
+}
+
+* {
+	font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+p {
+	padding: 10px;
+}
+
+body{
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+}
+
+#top-bar{
+	position: fixed;
+	height: 100px;
+	width: 100%;
+	display: flex;
+}
+
+.entity-name{
+	height: 100%;
+	width: 30%;
+}
+.entity-hwa{
+	border: 1px solid;
+	border-color: silver;
+	background: black;
+	height: 80%;
+	width: 70%;
+	display: flex;
+	flex-direction: column;
+}
+#player-healthbar{
+	width: var(--player-health, 50%);
+}
+#player-wizarbar{
+	width: var(--player-wizar, 50%);
+}
+#player-armorbar{
+	width: var(--player-armor, 50%);
+}
+
+#target-healthbar{
+	margin-left: auto;
+	width: var(--target-health, 50%);
+}
+#target-wizarbar{
+	margin-left: auto;
+	width: var(--target-wizar, 50%);
+}
+#target-armorbar{
+	margin-left: auto;
+	width: var(--target-armor, 50%);
+}
+
+.wizarbar{
+	background:blue;
+	height: 33%;
+	padding-top: 10px;
+}
+.healthbar{
+	background: red;
+	height: 33%;
+	padding-top: 10px;
+}
+.armorbar{
+	background: white;
+	height: 33%;
+	padding-top: 10px;
+}
+
+.entity-status{
+	width: 50%;
+	display: flex;
+	flex-direction: row;
+}
+.entity-name{
+	font-size: 40px;
+	width: 30%;
+}
+#player-name{
+	background: lightblue;
+}
+#target-name{
+	background: salmon;
+	text-align: right;
+}
+
+
+#bottom-bar{
+	position: fixed;
+	height: 100px;
+	width: 100%;
+	display: flex;
+	bottom: 0px;
+}
+#primary-item{
+	background: GAINSBORO;
+	width: 50%;
+}
+#secondary-item{
+	background: LIGHTGRAY;
+	width: 50%;
+	text-align: right;
+}
+
+#center-zone{
+	background: DARKGRAY;
+	padding: 100px 0px 100px 0px;
+	height: 100vh;
+	display: flex;
+}
+
+#important-zone{
+	opacity: 0;
+	background: yellow;
+	height: 150px;
+	width: 500px;
+	position: absolute;
+	margin-top: 25vh;
+	margin-left: 25vw;
+	text-align: center;
+}
+
+
+
+.item-name{
+	font-size: 50px;
+}
