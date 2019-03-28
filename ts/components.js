@@ -1,36 +1,27 @@
-export enum ComponentModel {
-    IRRECEIVER = 'IRRECEIVER',
-    PRESSURE = 'PRESSURE',
-    BUTTON = 'BUTTON',
-    PWM_LED = 'PWM_LED',
-    LED = 'LED',
-    NP = 'NP',
-    MOTOR = 'MOTOR',
-    MAGNET = 'MAGNET',
-    SERVO = 'SERVO',
-    VIBRATOR = 'VIBRATOR',
-    BAR_NUMBER = 'BAR_NUMBER',
-    BAR_GRAPH = 'BAR_GRAPH'
-}
-
-export enum ComponentType {
-    RECEIVER = 'RECEIVER',
-    EMITTER = 'EMITTER',
-    HYBRID = 'HYBRID'
-}
-
-export type Component = {
-    _id: String,
-    name: String,
-    type: String,
-    model: ComponentModel,
-    property?: any,
-    positionCoods: [Number,Number],
-    version: String,
-    animations: Array<Function>
-}
-
-export const component = {
+"use strict";
+exports.__esModule = true;
+var ComponentModel;
+(function (ComponentModel) {
+    ComponentModel["IRRECEIVER"] = "IRRECEIVER";
+    ComponentModel["PRESSURE"] = "PRESSURE";
+    ComponentModel["BUTTON"] = "BUTTON";
+    ComponentModel["PWM_LED"] = "PWM_LED";
+    ComponentModel["LED"] = "LED";
+    ComponentModel["NP"] = "NP";
+    ComponentModel["MOTOR"] = "MOTOR";
+    ComponentModel["MAGNET"] = "MAGNET";
+    ComponentModel["SERVO"] = "SERVO";
+    ComponentModel["VIBRATOR"] = "VIBRATOR";
+    ComponentModel["BAR_NUMBER"] = "BAR_NUMBER";
+    ComponentModel["BAR_GRAPH"] = "BAR_GRAPH";
+})(ComponentModel = exports.ComponentModel || (exports.ComponentModel = {}));
+var ComponentType;
+(function (ComponentType) {
+    ComponentType["RECEIVER"] = "RECEIVER";
+    ComponentType["EMITTER"] = "EMITTER";
+    ComponentType["HYBRID"] = "HYBRID";
+})(ComponentType = exports.ComponentType || (exports.ComponentType = {}));
+exports.component = {
     led: {
         type: ComponentType.EMITTER,
         model: ComponentModel.LED,
@@ -39,46 +30,43 @@ export const component = {
             type: '',
             power: ''
         },
-        animations: [],
+        animations: []
     },
     neopixel: {
         model: ComponentModel.NP,
         type: ComponentType.EMITTER,
-        animations: [],
+        animations: []
     },
     dc_motor: {
         type: ComponentType.EMITTER,
         model: ComponentModel.VIBRATOR,
         property: {
             size: '',
-            voltage: '',
+            voltage: ''
         },
-        animations: [],
+        animations: []
     },
     button: {
         type: ComponentType.RECEIVER,
         model: ComponentModel.BUTTON,
-        animations: [],
-
+        animations: []
     },
     pressure: {
         type: ComponentType.RECEIVER,
         model: ComponentModel.BUTTON,
-        animations: [],
-
+        animations: []
     },
     digit_display: {
         type: ComponentType.EMITTER,
         model: ComponentModel.BAR_NUMBER,
-        animations: [],
+        animations: []
     },
     ir_receiver: {
         type: ComponentType.RECEIVER,
         model: ComponentModel.IRRECEIVER,
-        animations: [],
-    },
-}
-
+        animations: []
+    }
+};
 // enum MotorAnimation {
 //     begin
 //     loop
@@ -86,14 +74,11 @@ export const component = {
 //     shot
 //     intensity
 // }
-
 // enum NPAnimation {
 //     begin
 //     loop
 //     end
-
 //     stop
-    
 //     white
 //     blue
 //     violet
@@ -102,7 +87,6 @@ export const component = {
 //     yellow
 //     green
 //     turquoise
-    
 //     shot
 //     laser
 //     electric
