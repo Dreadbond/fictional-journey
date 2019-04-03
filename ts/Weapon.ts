@@ -1,5 +1,5 @@
 import { Item } from "./Item";
-import { Component } from './components'
+import { Component } from './Components'
 
 export class Weapon extends Item{
     type: String ;
@@ -13,6 +13,7 @@ export class Weapon extends Item{
     constructor(name: String, type: String){
         super(name);
         this.type = type ;
+        this.components = [] ;
         switch (type){
             case 'shotgun':
                 this.damage = 30 ;
@@ -29,6 +30,10 @@ export class Weapon extends Item{
             break;
 
         }
+    }
+
+    public addComponent = (c: any) => {
+        this.components.push(c)
     }
 }
 
